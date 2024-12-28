@@ -1,0 +1,125 @@
+/* Title Section */
+#title {
+  background-image: url('assets/images/tech.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 100vh; /* Ensures the section takes the entire screen height */
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Centers the content horizontally */
+  opacity: 0; /* Starts with no visibility */
+  transform: translateY(50px); /* Starts from below */
+  transition: opacity 2s ease-out, transform 2s ease-out; /* Adds transition for smooth animation */
+}
+
+#title.animate {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* End in the original position */
+}
+
+@media (max-width: 768px) {
+  #title {
+    min-height: 80vh; /* Adjust for smaller screen sizes */
+  }
+}
+
+/* Remove the gradient-background class if it's not needed, or define it */
+.gradient-background {
+  background: linear-gradient(to right, #ff66b2, #3399ff);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* Optional: Add media queries to adjust for mobile views */
+
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.text-center h5, .text-center p {
+  margin-bottom: 1rem;
+}
+
+/* Ensure the navbar-toggler is visible on small screens */
+@media (max-width: 700px) {
+  .navbar-toggler {
+    display: block; /* Show the hamburger button on smaller screens */
+  }
+
+  /* By default, the navbar links will be hidden on mobile view */
+  .navbar-collapse {
+    display: none; /* Hide the navigation links initially */
+  }
+
+  /* When the navbar-toggler is clicked, show the navbar links */
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  /* Optional: You can style the background color of the menu when expanded */
+  .navbar-collapse {
+    background-color: #f8f9fa; /* Light background color for the menu */
+  }
+
+  /* Optional: Style the nav links when the menu is expanded */
+  .navbar-nav {
+    padding: 10px;
+  }
+
+  /* Style the individual nav links for mobile */
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    color: #000; /* Ensure text color is dark on mobile */
+  }
+}
+/* Custom Green Navbar */
+.custom-green-navbar {
+  background-color: #52a447; /* Custom green color */
+}
+/* Ensure the collapsed navbar maintains the green background */
+.navbar-collapse {
+  background-color: #52a447!important; /* Ensures green background for collapsed menu */
+}
+
+/* Optional: Style the navbar-toggler (hamburger menu) */
+.navbar-toggler {
+  border-color: #52a447; /* Green border for the hamburger button */
+}
+/* Add background color to the "My Projects" heading */
+.section-heading {
+  background-color: #52a447 !important; /* Choose your desired color */
+  color: white !important; /* Text color for contrast */
+  padding: 10px 0; /* Padding for some vertical space */
+}
+
+
+
+
+
+
+
+
